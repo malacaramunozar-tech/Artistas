@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Currículum Vitae</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background-color: #e9ecef;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 950px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        /* Encabezado */
+        header {
+            background-color: #7b1fa2;
+            color: white;
+            text-align: center;
+            padding: 35px 20px;
+        }
+
+        header h1 {
+            font-size: 30px;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+
+        header p {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+
+        /* Contenido Principal */
+        .main-content {
+            display: flex;
+            padding: 25px;
+            gap: 25px;
+        }
+
+        .left-column {
+            flex: 2;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .right-column {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        /* Títulos de Sección */
+        .section-title {
+            background-color: #7b1fa2;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+
+        /* Tarjetas de Información */
+        .card {
+            background-color: #f8f9fa;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 18px;
+        }
+
+        .card p {
+            font-size: 14px;
+            color: #444;
+            line-height: 1.6;
+        }
+
+        .card-item {
+            margin-bottom: 15px;
+        }
+
+        .card-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .card-item h3 {
+            color: #7b1fa2;
+            font-size: 16px;
+            margin-bottom: 4px;
+        }
+
+        .card-item span {
+            font-size: 12px;
+            color: #666;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 6px;
+        }
+
+        /* Listas */
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+            color: #333;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        /* Pie de página */
+        footer {
+            background-color: #f8f9fa;
+            border-top: 1px solid #e0e0e0;
+            padding: 20px;
+            text-align: right;
+        }
+
+        .btn-regresar {
+            display: inline-block;
+            background-color: #7b1fa2;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 14px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-regresar:hover {
+            background-color: #4a148c;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Encabezado -->
+        <header>
+            <h1>CURRÍCULUM VITAE</h1>
+            <p>Desarrollador Web / Estudiante</p>
+        </header>
+
+        <!-- Contenido principal -->
+        <div class="main-content">
+            
+            <!-- Columna Izquierda (Perfil, Experiencia, Educación) -->
+            <div class="left-column">
+                
+                <!-- Perfil Profesional -->
+                <div>
+                    <div class="section-title">Perfil Profesional</div>
+                    <div class="card">
+                        <p>Estudiante apasionado por el desarrollo web y la tecnología. Con sólidos conocimientos en maquetación HTML y CSS, creación de interfaces dinámicas y diseño adaptativo. Enfocado en el aprendizaje continuo y el trabajo en equipo.</p>
+                    </div>
+                </div>
+
+                <!-- Experiencia y Proyectos -->
+                <div>
+                    <div class="section-title">Proyectos y Experiencia</div>
+                    <div class="card">
+                        <div class="card-item">
+                            <h3>Desarrollo de Sitio Web de Música</h3>
+                            <span>Proyecto Escolar / Personal - 2026</span>
+                            <p>Diseño y maquetación de un portal web interactivo sobre artistas de la música regional mexicana, implementando estructuras en HTML, estilos personalizados con CSS y reproductores multimedia.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Educación -->
+                <div>
+                    <div class="section-title">Educación</div>
+                    <div class="card">
+                        <div class="card-item">
+                            <h3>Educación Secundaria / Preparatoria</h3>
+                            <span>En Curso</span>
+                            <p>Especialidad o enfoque en Informática / Programación.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Columna Derecha (Contacto, Habilidades, Idiomas) -->
+            <div class="right-column">
+                
+                <!-- Datos de Contacto -->
+                <div>
+                    <div class="section-title">Contacto</div>
+                    <div class="card">
+                        <p><strong>Teléfono:</strong> +52 123 456 7890</p>
+                        <p><strong>Email:</strong> correo@ejemplo.com</p>
+                        <p><strong>Ubicación:</strong> México</p>
+                    </div>
+                </div>
+
+                <!-- Habilidades Técnicas -->
+                <div>
+                    <div class="section-title">Habilidades</div>
+                    <div class="card">
+                        <ul>
+                            <li>HTML5 / CSS3</li>
+                            <li>Maquetación Web</li>
+                            <li>Diseño Responsivo</li>
+                            <li>Mantenimiento de PC</li>
+                            <li>Trabajo en equipo</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Idiomas -->
+                <div>
+                    <div class="section-title">Idiomas</div>
+                    <div class="card">
+                        <ul>
+                            <li><strong>Español:</strong> Nativo</li>
+                            <li><strong>Inglés:</strong> Básico / Intermedio</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Botón para regresar a la página de música -->
+        <footer>
+            <a href="musica.html" class="btn-regresar">🎵 Regresar a la página de Música</a>
+        </footer>
+    </div>
+
+</body>
+</html>
