@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Música, Cantantes y Artistas Favoritos</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background-color: #e9ecef;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 950px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        header {
+            background-color: #7b1fa2;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        header h1 {
+            font-size: 28px;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+
+        header p {
+            font-size: 15px;
+            opacity: 0.9;
+        }
+
+        nav {
+            background-color: #f8f9fa;
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .btn-nav {
+            background-color: white;
+            border: 1px solid #ccc;
+            padding: 8px 22px;
+            border-radius: 8px;
+            font-weight: bold;
+            color: #333;
+            cursor: pointer;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .main-content {
+            display: flex;
+            padding: 20px;
+            gap: 20px;
+        }
+
+        .left-column {
+            flex: 2;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .right-column {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .section-title {
+            background-color: #7b1fa2;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .artist-card {
+            background-color: #f8f9fa;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .artist-card-header {
+            display: flex;
+            gap: 15px;
+        }
+
+        .artist-img {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 8px;
+            border: 2px solid #7b1fa2;
+        }
+
+        .artist-info {
+            font-size: 13px;
+            color: #333;
+            line-height: 1.5;
+        }
+
+        .artist-info h3 {
+            color: #7b1fa2;
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .artist-info p {
+            margin-bottom: 4px;
+        }
+
+        .video-container {
+            margin-top: 10px;
+            width: 100%;
+        }
+
+        .video-container p {
+            font-size: 13px;
+            font-weight: bold;
+            color: #7b1fa2;
+            margin-bottom: 5px;
+        }
+
+        iframe {
+            border-radius: 8px;
+            border: none;
+        }
+
+        .info-card {
+            background-color: #f8f9fa;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 15px;
+        }
+
+        .info-card ul {
+            list-style-type: disc;
+            padding-left: 20px;
+            color: #333;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        .favorite-title {
+            color: #7b1fa2;
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background-color: #f8f9fa;
+            border-top: 1px solid #e0e0e0;
+            padding: 20px;
+            text-align: right;
+        }
+
+        .btn-curriculum {
+            display: inline-block;
+            background-color: #7b1fa2;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 14px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-curriculum:hover {
+            background-color: #4a148c;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>MI MÚSICA, CANTANTES Y ARTISTAS FAVORITOS</h1>
+            <p>Mis artistas favoritos de la música regional mexicana</p>
+        </header>
+
+        <nav>
+            <button class="btn-nav">Música</button>
+            <button class="btn-nav">Videos</button>
+            <button class="btn-nav">Artistas</button>
+            <button class="btn-nav">Radio</button>
+            <button class="btn-nav">Noticias</button>
+        </nav>
+
+        <div class="main-content">
+            <div class="left-column">
+                <div class="section-title">Cantantes famosos</div>
+
+                <div class="artist-card">
+                    <div class="artist-card-header">
+                        <img src="joan.jpg" alt="Joan Sebastian" class="artist-img">
+                        <div class="artist-info">
+                            <h3>Joan Sebastian</h3>
+                            <p><strong>Nombre:</strong> José Manuel Figueroa Figueroa</p>
+                            <p><strong>Origen:</strong> Juliantla, Guerrero, México</p>
+                            <p><strong>Profesión:</strong> Cantante y compositor</p>
+                            <p>Joan Sebastian fue uno de los artistas más representativos de la música mexicana, conocido como "El Rey del Jaripeo". Destacó por sus composiciones románticas.Joan Sebastian nació en la localidad de Juliantla, municipio de Taxco de Alarcón, al norte del estado de Guerrero, México. Su madre fue doña Celia Figueroa.[10] Cuando tenía ocho años de edad ingresó como estudiante interno a un establecimiento educativo en Guanajuato, donde dio sus primeros pasos en el mundo de la música; de hecho, modificaba las letras de las canciones y componía versos musicales. Tres años después regresó a Juliantla y a los doce años volvió a ser internado, pero en esta ocasión en una institución educativa religiosa en Morelos, donde su cuidado estuvo a cargo del sacerdote David Salgado. En aquella época manifestó su deseo de convertirse en sacerdote; sin embargo, su padre se negó a que su hijo dedicara su vida a la iglesia ya que consideraba que tenía talento para la música.[11] A la abuela de Sebastian le pareció una buena idea que su nieto iniciara una vida religiosa y estaba dispuesta a apoyarlo.[12] A pesar de la negativa de su padre, insistió en emprender una vida sacerdotal y a los catorce años se inscribió como seminarista en el Seminario Conciliar de San José, en Cuernavaca, Morelos. En la época que estuvo de alumno del seminario compuso una misa, pero finalmente tomó la decisión de que su vocación no era el sacerdocio.[12][13</p>
+                        </div>
+                    </div>
+                    <div class="video-container">
+                        <p>Canción destacada: Eso y Más</p>
+                        <iframe width="100%" height="200" src="https://www.youtube.com/embed/th4rbjb504c" title="Joan Sebastian - Eso y Más" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <div class="artist-card">
+                    <div class="artist-card-header">
+                        <img src="corne.jpg" alt="Cornelio Vega" class="artist-img">
+                        <div class="artist-info">
+                            <h3>Cornelio Vega Jr.</h3>
+                            <p><strong>Nombre:</strong> Cornelio Vega Jr.</p>
+                            <p><strong>Origen:</strong> Ciudad Obregón, Sonora, México</p>
+                            <p><strong>Profesión:</strong> Cantante y compositor</p>
+                            <p>Vocalista principal de Cornelio Vega y Su Dinastía. Una de las figuras jóvenes más destacadas en el género norteño-banda.Joan Sebastian nació en la localidad de Juliantla, municipio de Taxco de Alarcón, al norte del estado de Guerrero, México. Su madre fue doña Celia Figueroa.[10] Cuando tenía ocho años de edad ingresó como estudiante interno a un establecimiento educativo en Guanajuato, donde dio sus primeros pasos en el mundo de la música; de hecho, modificaba las letras de las canciones y componía versos musicales. Tres años después regresó a Juliantla y a los doce años volvió a ser internado, pero en esta ocasión en una institución educativa religiosa en Morelos, donde su cuidado estuvo a cargo del sacerdote David Salgado. En aquella época manifestó su deseo de convertirse en sacerdote; sin embargo, su padre se negó a que su hijo dedicara su vida a la iglesia ya que consideraba que tenía talento para la música.[11] A la abuela de Sebastian le pareció una buena idea que su nieto iniciara una vida religiosa y estaba dispuesta a apoyarlo.[12] A pesar de la negativa de su padre, insistió en emprender una vida sacerdotal y a los catorce años se inscribió como seminarista en el Seminario Conciliar de San José, en Cuernavaca, Morelos. En la época que estuvo de alumno del seminario compuso una misa, pero finalmente tomó la decisión de que su vocación no era el sacerdocio.[12][13</p>
+                        </div>
+                    </div>
+                    <div class="video-container">
+                        <p>Canción destacada: 15 Besos</p>
+                        <iframe width="100%" height="200" src="https://www.youtube.com/embed/7vbLS2Y1aZc" title="Cornelio Vega y Su Dinastía - 15 Besos" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <div class="artist-card">
+                    <div class="artist-card-header">
+                        <img src="banda.jpg" alt="Banda MS" class="artist-img">
+                        <div class="artist-info">
+                            <h3>Banda MS</h3>
+                            <p><strong>Origen:</strong> Mazatlán, Sinaloa, México</p>
+                            <p><strong>Profesión:</strong> Agrupación musical</p>
+                            <p>Banda Sinaloense MS de Sergio Lizárraga es una de las bandas más influyentes y galardonadas del género regional mexicano.Banda MS de Sergio Lizárraga, conocida artísticamente como Banda MS, es una agrupación de música regional mexicana originaria de Mazatlán, Sinaloa, México. Fue fundada en 2003 por Sergio Lizárraga y se ha consolidado como una de las bandas más representativas y exitosas del género banda en el siglo XXI</p>
+                        </div>
+                    </div>
+                    <div class="video-container">
+                        <p>Canción destacada: Mi Mayor Anhelo</p>
+                        <iframe width="100%" height="200" src="https://www.youtube.com/embed/WmlJHCzvs_Y" title="Banda MS - Mi Mayor Anhelo" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <div class="artist-card">
+                    <div class="artist-card-header">
+                        <img src="los dos.jpg" alt="Los 2 de Tamaulipas" class="artist-img">
+                        <div class="artist-info">
+                            <h3>Los 2 de Tamaulipas</h3>
+                            <p><strong>Origen:</strong> Tamaulipas, México</p>
+                            <p><strong>Profesión:</strong> Agrupación de música norteña</p>
+                            <p>Agrupación conformada por los hermanos Rolando y Orlando Zapata, reconocidos por su estilo de música norteña y corridos.Los Dos De Tamaulipas es una agrupación de regional mexicano. Se fundó en 2013, en Tamaulipas, México, por los gemelos Rolando y Orlando Zapata. Han compartido sus temas, mostrando con sus letras, parte de sus vidas y realidades sociales.
+
+Destacan entre sus éxitos, "Arriba la compañía", "Pura adrenalina", "Bendecido" y "Con toda la fe", que cuentan con excelente cifras de reproducciones en las plataformas digitales de reproducción musical.</p>
+                        </div>
+                    </div>
+                    <div class="video-container">
+                        <p>Canción destacada: El Chalito</p>
+                        <iframe width="100%" height="200" src="https://www.youtube.com/embed/6hU5t_3WNCE" title="Los 2 de Tamaulipas - El Chalito" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right-column">
+                <div class="section-title">Información</div>
+                
+                <div class="info-card">
+                    <ul>
+                        <li>Regional mexicano</li>
+                        <li>Banda sinaloense</li>
+                        <li>Norteño</li>
+                        <li>Ranchero</li>
+                        <li>Corridos</li>
+                    </ul>
+                </div>
+
+                <div class="info-card">
+                    <div class="favorite-title">⭐ Mis favoritos</div>
+                    <ul>
+                        <li>Joan Sebastian</li>
+                        <li>Cornelio Vega</li>
+                        <li>Los 2 de Tamaulipas</li>
+                        <li>Banda MS</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <a href="curriculum.html" class="btn-curriculum">📄 Regresar al currículum</a>
+        </footer>
+    </div>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radio y Cines</title>
+    <style>
+        /* Contenedor principal de la tarjeta lateral */
+        .card-lateral {
+            background-color: #ffffff;
+            border-radius: 12px;
+            border: 1px solid #e0e0e0;
+            overflow: hidden;
+            max-width: 300px;
+            font-family: Arial, sans-serif;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+
+        /* Encabezado morado */
+        .header-lateral {
+            background-color: #7b1fa2; /* Morado de tu diseño */
+            color: #ffffff;
+            padding: 10px 15px;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        /* Lista de elementos */
+        .contenido-radio {
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        /* Cada fila */
+        .item-radio {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        /* TAMAÑO MEDIANO / ESTÁNDAR (50px) */
+        .logo-radio {
+            width: 50px;
+            height: 50px;
+            object-fit: cover; /* Ajusta la imagen al recuadro */
+            border-radius: 8px; /* Bordes suavemente redondeados */
+            border: 1px solid #e0e0e0;
+            flex-shrink: 0; /* Evita que la imagen se aplaste */
+        }
+
+        /* Texto de los cines */
+        .nombre-cine {
+            font-size: 15px;
+            color: #333333;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card-lateral">
+        <div class="header-lateral">Radio / Cines</div>
+        
+        <div class="contenido-radio">
+            
+            <div class="item-radio">
+                <img src="cinepolis.jpg" alt="Cinépolis" class="logo-radio">
+                <span class="nombre-cine">Cinépolis</span>
+            </div>
+            
+            <div class="item-radio">
+                <img src="cinemex.jpg" alt="Cinemex" class="logo-radio">
+                <span class="nombre-cine">Cinemex</span>
+            </div>
+            
+            <div class="item-radio">
+                <img src="cinemark.jpg" alt="Cinemark" class="logo-radio">
+                <span class="nombre-cine">Cinemark</span>
+            </div>
+            
+            <div class="item-radio">
+                <img src="universal.jpg" alt="Universal Pictures" class="logo-radio">
+                <span class="nombre-cine">Universal Pictures</span>
+            </div>
+            
+        </div>
+    </div>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sección de Noticias</title>
+    <style>
+        /* Contenedor principal de la tarjeta lateral de Noticias */
+        .card-lateral-noticias {
+            background-color: #ffffff;
+            border-radius: 12px;
+            border: 1px solid #e0e0e0;
+            overflow: hidden;
+            max-width: 300px;
+            font-family: Arial, sans-serif;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+
+        /* Encabezado morado de la sección */
+        .header-noticias {
+            background-color: #7b1fa2; /* Morado a juego con tu página */
+            color: #ffffff;
+            padding: 10px 15px;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        /* Lista de noticias */
+        .contenido-noticias {
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        /* Cada fila de noticia */
+        .item-noticia {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        /* TAMAÑO ESTÁNDAR / MEDIANO (50px) */
+        .logo-noticia {
+            width: 50px;
+            height: 50px;
+            object-fit: contain; /* Ajusta sin recortar el texto del periódico */
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            border: 1px solid #e0e0e0;
+            padding: 2px;
+            flex-shrink: 0;
+        }
+
+        /* Nombre del periódico o medio */
+        .nombre-noticia {
+            font-size: 15px;
+            color: #333333;
+            font-weight: 500;
+        }
+
+        .item-noticia:hover .nombre-noticia {
+            color: #7b1fa2;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- SECCIÓN NOTICIAS -->
+    <div class="card-lateral-noticias">
+        <div class="header-noticias">Noticias</div>
+        
+        <div class="contenido-noticias">
+            
+            <div class="item-noticia">
+                <img src="heraldo.jpg" alt="El Heraldo León" class="logo-noticia">
+                <span class="nombre-noticia">El Heraldo de León</span>
+            </div>
+            
+            <div class="item-noticia">
+                <img src="reforma.jpg" alt="Reforma" class="logo-noticia">
+                <span class="nombre-noticia">Reforma</span>
+            </div>
+            
+            <div class="item-noticia">
+                <img src="universal_2.jpg" alt="Universal" class="logo-noticia">
+                <span class="nombre-noticia">Universal</span>
+            </div>
+            
+            <div class="item-noticia">
+                <img src="e.jpg" alt="El Economista" class="logo-noticia">
+                <span class="nombre-noticia">El Economista</span>
+            </div>
+            <!DOCTYPE html>
+<html lang="es">
+<head>
+   
+
+    </div>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!DOCTYPE html>
+<html lang="es">
+<head>
+    
+        </div>
+    </div>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <m
+</body>
+</html>
